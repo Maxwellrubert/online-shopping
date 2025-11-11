@@ -75,22 +75,4 @@ Useful endpoints (examples)
 - GET   /api/categories
 - GET   /api/dashboard/stats
 
-Publishing this repository to GitHub
-
-I can push this project to a new GitHub repository for you. I need one of the following:
-- a repository name and whether it should be public or private, and permission to use the GitHub CLI (if installed & authenticated), or
-- a remote HTTPS URL for the new repository (e.g. https://github.com/your-user/your-repo.git) so I can add it and push, or
-- a Personal Access Token and repo name so I can create the repo via the API (I won't request tokens directly here — prefer the `gh` flow).
-
-If you prefer to do it yourself, here are the exact commands to run from the project root:
-
-```powershell
-# create a new repo on GitHub (manual step or use GitHub web UI)
-git init
-git add .
-git commit -m "Initial project import — cleaned README and UI fixes"
-git remote add origin <your-remote-url>
-git branch -M main
-git push -u origin main
-```
 
