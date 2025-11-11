@@ -1,4 +1,4 @@
-# Online Shopping — Fullstack
+# Online Shopping, Fullstack
 
 This repository contains a small full-stack application:
 - Backend: Spring Boot REST API (Java 17, Spring Boot 3.x)
