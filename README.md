@@ -94,15 +94,3 @@ git branch -M main
 git push -u origin main
 ```
 
-If you want me to try creating and pushing the repo automatically, tell me the desired repository name and whether it's public/private, and confirm if I should use the `gh` CLI (I'll detect if it's installed and authenticated). If `gh` isn't available or authenticated, I'll guide you through the exact commands above.
-
-Notes
-- I updated UI styles for the admin/product tables and fixed the Add/Edit product modal so it uses the app's modal styles.
-- I adjusted the Maven wrapper script to improve robustness when running on Windows.
-
-Next steps I can take for you
-- Finish stripping comments across remaining files (frontend & mobile).
-- Finish publishing the repo to GitHub (need repo name/auth flow confirmation).
-
----
-Updated README and prepared to publish — tell me the GitHub repo name and how you'd like me to authenticate/create it, or run the short push commands above locally.
