@@ -1,0 +1,38 @@
+# docker-compose.yml
+# PURPOSE: This file defines and runs our MySQL database in a Docker container
+# WHY: Instead of installing MySQL on your computer, Docker creates an isolated environment
+# WHAT IT DOES: 
+#   - Creates a MySQL 8.0 database
+#   - Sets up username, password, and database name
+#   - Maps port 3306 so Spring Boot can connect to it
+#   - Keeps data safe in a volume (even if container stops)
+
+version: '3.8'
+
+services:
+  # This is our MySQL database service
+  mysql:
+    image: mysql:8.0                    # Use MySQL version 8.0 from Docker Hub
+    container_name: shopping-mysql       # Give it a friendly name
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword  # Root user password
+      MYSQL_DATABASE: shopping_db        # Create this database automatically
+      MYSQL_USER: shopuser               # Create this user automatically
+      MYSQL_PASSWORD: shoppass           # Password for shopuser
+    ports:
+      - "3306:3306"                      # Map port 3306 (Host:Container)
+                                         # This lets Spring Boot connect to MySQL
+    volumes:
+      - mysql_data:/var/lib/mysql        # Persist data here (won't lose data on restart)
+      - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql  # Run this SQL on first start
+    networks:
+      - shopping-network                 # Put MySQL on this network
+
+# Define the network - allows containers to talk to each other
+networks:
+  shopping-network:
+    driver: bridge
+
+# Define the volume - stores MySQL data permanently
+volumes:
+  mysql_data:

@@ -1,0 +1,44 @@
+Create an Online Shopping application
+
+Pages:
+1.	Login page with open authentication
+a.	Anyone can login using dummy username and password
+
+2.	Dashboard 
+a.	After clicking on Login button, it should open the Dashboard page
+b.	Dashboard should show
+i.	Total Number of Products
+ii.	List of Categories (No need for edit, update delete options)
+iii.	Total Value of all Products (Sum of price x total items of all the products)
+iv.	Total items in Stock
+c.	‘Admin’ and Logout link on the top (menu) of the dashboard
+i.	Admin link should open the Admin page
+ii.	Logout link should open the Login page
+
+3.	Admin page should show
+a.	List of Products
+i.	Id
+ii.	Product name
+iii.	Category
+iv.	Price
+v.	Total items in Stock (for that particular product)
+
+
+Tables in Database:
+1.	Product
+2.	Category
+
+Sample Data:
+ID	Name	Category	Price	Total Items in Stock
+1	Cake	Food	200	10
+2	Phone	Mobiles	20000	100
+3	Laptop	Electronics	400000	20
+4	Book	Stationery	50	3
+.
+
+
+Tech Stack: React for frontend and Springboot for backend, also mysql running in docker
+Code: the code can be basic and understandable, as this project is for my learning,
+I should know why the specific code or file being added, with its purpose and explanation, 
+i should have a clear understanding of the entire project code, i have some very basic idea about react, springboot and db,
+I would like learn all the things further and understand how thi sproject works
